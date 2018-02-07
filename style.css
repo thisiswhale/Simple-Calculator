@@ -1,62 +1,112 @@
-html, body{
-  padding:0;
+html, body {
+  padding: 0;
   margin: 0;
+  background-color: #50312F;
+  font-family: arial;
+  color: #FFFFF0;
 }
 
-.container{
+.container {
   margin: 10% auto;
   width: 50%;
 }
 
-#calculator{
+#calculator {
   display: grid;
   margin: 0 auto;
-  border: black 3px solid;
-  padding: 30px;
+  border: #2E2300 2px solid;
+  border-radius: 15px;
+  padding: 25px;
   height: 350px;
   width: 225px;
-}
-#window-box{
-    border: black 5px solid;
-    background-color: grey;
-    height: 80px;
-    position: relative;
-}
-.window-display{
-  text-align: right;
-  padding: 5px;
-}
-.window-display.large{
-font-size: 25px;
-font-weight: bold;
-position: absolute;
- bottom: 0;
- right: 0;
+  background-color: #4F6457;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 5px 6px 20px 7px rgba(0, 0, 0, 0.19);
 }
 
-.btn-row{
+#window-box {
+  border: rgba(125, 150, 150, 0.7) 2px solid;
+  background-color: #75B1A9;
+  height: 80px;
+  position: relative;
+
+}
+
+.window-display {
+  text-align: right;
+  padding: 5px 2px 5px 5px;
+}
+
+.window-display.small {
+  position: absolute;
+  font-size: 20px;
+  bottom: 0;
+  right: 0;
+}
+
+.window-display.large {
+  font-size: 2.4em;
+  font-weight: bold;
+  height: 40%;
+  margin-right: 1px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .05em solid #E6DF44;/* The typwriter cursor */
+  white-space: nowrap;/* Keeps the content on a single line */
+  animation: blink-caret .75s step-end infinite;
+}
+
+/* The typewriter cursor effect */
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent
+  }
+  50% {
+    border-color: #E6DF44;
+  }
+}
+
+.btn-row {
   text-align: center;
 }
 
-#row-4{
+#row-4 {
   margin-left: 2px;
 }
-#buttons-box{
-  border: black 5px solid;
+
+#buttons-box {
+  border: rgba(0, 0, 0, 0.22) 2px solid;
+  border-radius: 10px;
   margin-top: 10px;
   padding: 15px;
+  background-color: #4B7447 ;
+  box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.22) inset, 0px 0px 8px 3px rgba(0, 0, 0, 0.22) ;
 }
 
-.btn{
+.btn {
+  color: #FFFFF0;
   text-align: center;
   font-size: 20px;
-  height:40px;
+  height: 40px;
   width: 40px;
   margin-top: 4px;
+  border-color: #E6DF44;
+  border-radius: 5px;
+  background-color:#E6DF44;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19)
 }
-.plus-btn{
-  height:84px;
+
+.special-btn{
+  background-color: #F0810F;
+  border-color: #F0810F;
+}
+
+.operator-btn{
+  background-color:#D9B44A;
+  border-color: #D9B44A;
+}
+.plus-btn {
+  height: 84px;
   width: 40px;
-  float:right;
-  margin-right:6px
+  float: right;
+  margin-right: 8px
 }
